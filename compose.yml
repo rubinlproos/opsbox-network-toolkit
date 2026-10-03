@@ -1,0 +1,7 @@
+services:
+  opsbox:
+    image: test:latest
+    container_name: opsbox
+    hostname: opsbox
+    network_mode: 'host'
+    
