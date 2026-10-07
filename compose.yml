@@ -1,6 +1,6 @@
 services:
   opsbox:
-    image: test:latest
+    image: rubinlproos/opsbox:develop
     container_name: opsbox
     hostname: opsbox
     network_mode: 'host'

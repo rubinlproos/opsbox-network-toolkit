@@ -1,3 +1,10 @@
 #!/bin/bash
+APP_NAME="opsbox"
+WORKING_DIR=$(pwd)
+GIT_HEAD_FILE="${WORKING_DIR}/.git/HEAD"
+DOCKER_TAG=$(cat $GIT_HEAD_FILE | cut -d"/" -f3)
 
-docker build -t test:latest .
+
+echo "Building ${APP_NAME}/${DOCKER_TAG}"
+echo "=================================="
+docker build -t rubinlproos/${APP_NAME}:${DOCKER_TAG} .

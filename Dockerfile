@@ -8,6 +8,6 @@ RUN apk add --no-cache \
     nmap \
     netcat-openbsd \
     vim 
-COPY profile /root/.
-RUN source /root.profile
+ENV ENV="/etc/shinit"
+COPY shinit /etc/.
 CMD ["sh", "-c", "sleep infinity"]
